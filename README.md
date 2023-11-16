@@ -21,7 +21,7 @@ Host cuhk
 ```
 - Do not use pwd to log in to the remote server: saving local computer's `~/.ssh/id_rsa.pub` to remote `~/.ssh/authorized_keys`
 - Using `Oh-my-ZSH` on remote server:
-```
+```bash
 # update apt or apt-get
 apt update/upgrade
 apt-get update/upgrade
@@ -53,4 +53,30 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # activate changes
 source ~/.zshrc
+```
+- Using anaconda3 on an individual account on an AI Station (Do not have sudo permission)
+```bash
+# download anaconda3
+wget https://mirrors.bfsu.edu.cn/anaconda/archive/Anaconda3-2023.09-0-Linux-x86_64.sh --no-check-certificate
+
+# install anaconda3
+bash Anaconda3-2021.11-Linux-x86_64.sh
+
+## when installing, pls change the config file root to anaconda3
+### original
+/root/anaconda3/bin
+### change to the individual account
+/uname/anaconda3/bin
+
+# change environment variable for anaconda3
+vim /etc/profile
+
+## add the following command to the end of `/etc/profile`
+export PATH=/uname/anaconda3/bin:$PATH
+
+# activate changes
+source /etc/profile
+
+# init conda, if using zsh and need to open a new bash
+conda init zsh
 ```
