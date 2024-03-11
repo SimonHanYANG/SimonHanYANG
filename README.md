@@ -80,3 +80,8 @@ source /etc/profile
 # init conda, if using zsh and need to open a new bash
 conda init zsh
 ```
+### Tips/Bugs
+- For Linux: `ImportError: libGL.so.1: cannot open shared object file: No such file or directory`
+```bash
+apt install libgl1-mesa-glx
+```
