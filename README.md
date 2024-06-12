@@ -85,3 +85,10 @@ conda init zsh
 ```bash
 apt install libgl1-mesa-glx
 ```
+- CUDA out of Memory
+```
+fuser -v /dev/nvidia*
+kill -9 pid
+```
+![image](https://github.com/SimonHanYANG/SimonHanYANG/assets/124108306/9bc67550-c595-4981-aba0-52d309fe6368)
+
