@@ -37,6 +37,8 @@ chsh -s /bin/zsh
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
+## in China
+sh -c "$(wget -O- https://install.ohmyz.sh/)"
 
 # install zsh-autosuggestions zsh-syntax-highlighting plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
