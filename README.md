@@ -37,6 +37,8 @@ chsh -s /bin/zsh
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
+## oh-my-zsh in China
+sh -c "$(curl -fsSL https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh)"
 ## in China
 sh -c "$(wget -O- https://install.ohmyz.sh/)"
 
