@@ -116,8 +116,11 @@ apt install libgl1-mesa-glx
 ```
 - CUDA out of Memory
 ```
+apt install psmisc
 fuser -v /dev/nvidia*
 kill -9 pid
 ```
 ![image](https://github.com/SimonHanYANG/SimonHanYANG/assets/124108306/9bc67550-c595-4981-aba0-52d309fe6368)
+
+- if kernel mount for one GPU: `sudo nvidia-smi --gpu-reset -i 0` where 0 is GPU id -- restart this GPU
 
