@@ -108,6 +108,13 @@ sudo apt-get update
 sudo apt-get -y install cuda-toolkit-12-8
 ```
 
+## TailScale Internal Network Penetration
+
+- Download TS: From the link: `https://tailscale.com/`
+- Follow the rules to install on your local server
+- After showing installation success, you can return to the website console to see the outside IP
+- Remember to disable `Key Expiry`
+
 
 ### Tips/Bugs
 - For Linux: `ImportError: libGL.so.1: cannot open shared object file: No such file or directory`
