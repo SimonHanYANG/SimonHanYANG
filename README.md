@@ -116,6 +116,31 @@ sudo apt-get -y install cuda-toolkit-12-8
 - Remember to disable `Key Expiry`
 
 
+## Install `Yazi` Terminal File Management
+
+```bash
+sudo rm /usr/local/bin/yazi /usr/local/bin/ya
+
+curl -LO https://github.com/sxyazi/yazi/releases/latest/download/yazi-x86_64-unknown-linux-musl.zip
+unzip yazi-x86_64-unknown-linux-musl.zip
+sudo mv yazi-x86_64-unknown-linux-musl/yazi /usr/local/bin/
+sudo mv yazi-x86_64-unknown-linux-musl/ya /usr/local/bin/
+
+yazi --version
+```
+
+Using `y` instead of `yazi`, add following code into ~/.zshrc:
+```bash
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+```
+
+
 ### Tips/Bugs
 - For Linux: `ImportError: libGL.so.1: cannot open shared object file: No such file or directory`
 ```bash
