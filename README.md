@@ -7,7 +7,7 @@
 - 💬 Ask me about coding, papers or anything interesting!
 - 📫 How to reach me: https://simonhanyang.github.io/
 - 😄 Pronouns: Panda
-- ⚡ Fun fact: Computer Vision Researcher but Still LOVE CODING APPs AND ANYTHING INTERESTING! 
+- ⚡ Fun fact: Computer Vision Researcher but Still LOVE CODING AND ANYTHING INTERESTING! 
 
 ## AI Station Server
 
